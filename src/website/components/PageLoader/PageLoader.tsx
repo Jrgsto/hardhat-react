@@ -1,15 +1,14 @@
-import React, {useEffect} from 'react'
-import {useProfile} from "@context/profile";
-
+import React, { useEffect } from "react";
+import { useProfile } from "@context/profile";
 
 const PageLoader = ({ children }) => {
-    const {loading, loadWallet} = useProfile()
+  const { loading, loadWallet } = useProfile();
 
-    useEffect(() => {
-        loadWallet()
-    },[])
+  useEffect(() => {
+    loadWallet();
+  }, []);
 
-    return !loading && children
-}
+  return !loading && children;
+};
 
-export default PageLoader
+export default PageLoader;
